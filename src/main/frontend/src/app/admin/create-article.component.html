@@ -1,0 +1,18 @@
+<p>
+  <mdl-textfield label="Title" type="text" [(ngModel)]="article.title" floating-label required></mdl-textfield>
+</p>
+<p>
+  <mdl-textfield label="Image Link" type="text" [(ngModel)]="article.imageLink" floating-label required></mdl-textfield>
+</p>
+<p>
+  <mdl-textfield rows="4" label="Preview text" type="text" [(ngModel)]="article.previewText" floating-label required></mdl-textfield>
+</p>
+<p>
+  <mdl-textfield rows="4" label="Main text" type="text" [(ngModel)]="article.text" floating-label required></mdl-textfield>
+</p>
+<p>
+  <mdl-textfield label="Likes" type="text" [(ngModel)]="article.likes" floating-label required pattern="\d+"></mdl-textfield>
+</p>
+<p>
+  <button mdl-button mdl-button-type="raised" mdl-ripple mdl-colored="primary" (click)="create()">Create</button>
+</p>

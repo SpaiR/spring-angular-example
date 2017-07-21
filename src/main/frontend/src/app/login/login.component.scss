@@ -1,0 +1,5 @@
+@import "../../scss/mixins";
+
+.mdl-grid {
+  @include content-template;
+}

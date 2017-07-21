@@ -1,0 +1,17 @@
+<div class="mdl-grid">
+  <div class="content-cell mdl-cell mdl-color--white mdl-cell--12-col" mdl-shadow="2">
+    <mdl-layout-header>
+      <mdl-layout-header-row>
+        <mdl-layout-title><a routerLink="."> Administrator Menu</a></mdl-layout-title>
+        <mdl-layout-spacer></mdl-layout-spacer>
+        <nav class="mdl-navigation">
+          <a routerLink="about" class="mdl-navigation__link">Change About</a>
+          <a (click)="logOut()" href="#" class="mdl-navigation__link"><mdl-icon>exit_to_app</mdl-icon>&nbsp;Logout</a>
+        </nav>
+      </mdl-layout-header-row>
+    </mdl-layout-header>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

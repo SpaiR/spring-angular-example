@@ -1,0 +1,20 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="content-cell mdl-cell mdl-color--white mdl-cell--4-col mdl-cell--8-col-tablet" mdl-shadow="4">
+    <div class="main-content">
+      <mdl-progress *ngIf="loginInProcess" [indeterminate]="true"></mdl-progress>
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <p>
+          <mdl-textfield label="Login" type="text" formControlName="username" floating-label></mdl-textfield>
+        </p>
+        <p>
+          <mdl-textfield label="Password" type="password" formControlName="password" floating-label></mdl-textfield>
+        </p>
+        <p>
+          <button mdl-button mdl-button-type="raised" mdl-ripple mdl-colored="primary"
+                  [disabled]="!form.valid || loginInProcess">Login</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

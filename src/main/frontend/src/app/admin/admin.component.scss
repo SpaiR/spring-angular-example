@@ -1,0 +1,13 @@
+@import "../../scss/mixins";
+
+.mdl-grid {
+  @include content-template;
+
+  .content-cell {
+    margin-top: 0;
+  }
+
+  mdl-layout-header {
+    display: block !important;
+  }
+}

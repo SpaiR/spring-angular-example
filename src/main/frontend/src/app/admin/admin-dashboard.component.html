@@ -1,0 +1,12 @@
+<h4 class="mdl-typography--display-1">Articles: <a routerLink="articles/new" mdl-button mdl-tooltip-large="Create article"><mdl-icon>add_box</mdl-icon></a></h4>
+<mdl-list>
+  <mdl-list-item *ngFor="let preview of previews | async" lines="3">
+    <mdl-list-item-primary-content>
+      <mdl-icon mdl-list-item-avatar mdl-tooltip-large="ID: {{preview.id}}">
+        <a routerLink="articles/{{preview.id}}">edit</a>
+      </mdl-icon>
+      <span class="mdl-typography--title">{{preview.title}}</span>
+      <mdl-list-item-text-body>{{preview.text}}</mdl-list-item-text-body>
+    </mdl-list-item-primary-content>
+  </mdl-list-item>
+</mdl-list>

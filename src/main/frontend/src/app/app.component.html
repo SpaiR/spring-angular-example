@@ -1,0 +1,43 @@
+<div id="app-container">
+  <mdl-layout mdl-layout-fixed-drawer>
+    <mdl-layout-drawer>
+      <mdl-layout-spacer></mdl-layout-spacer>
+      <mdl-layout-title>
+        <div class="mdl-typography--display-1 title-text">LOOK'N'TALK</div>
+      </mdl-layout-title>
+      <hr />
+      <nav class="mdl-navigation">
+        <a mdl-button routerLink="home">
+          <span class="mdl-typography--title-color-contrast">Home</span>
+        </a>
+        <a mdl-button routerLink="about">
+          <span class="mdl-typography--title-color-contrast">About</span>
+        </a>
+      </nav>
+      <hr />
+      <nav>
+        <a mdl-button mdl-button-type="icon" class="icon-facebook" not-provided>
+          <img src="./assets/icons/facebook.png" />
+        </a>
+        <a mdl-button mdl-button-type="icon" class="icon-twitter" not-provided>
+          <img src="./assets/icons/twitter.png" />
+        </a>
+        <a mdl-button mdl-button-type="icon" class="icon-google-plus" not-provided>
+          <img src="./assets/icons/google-plus.png" />
+        </a>
+        <a mdl-button mdl-button-type="icon" class="icon-github" not-provided>
+          <img src="./assets/icons/github-circle.png" />
+        </a>
+      </nav>
+      <mdl-layout-spacer></mdl-layout-spacer>
+      <div class="drawer-footer">
+        <span class="mdl-typography--caption-color-contrast">Code licensed under an MIT-style License.</span>
+      </div>
+    </mdl-layout-drawer>
+    <mdl-layout-content #mainLayout (scroll)="provideScrollEvent($event)">
+      <router-outlet (deactivate)="onRouterDeactivate()"></router-outlet>
+      <go-to-top-button></go-to-top-button>
+    </mdl-layout-content>
+  </mdl-layout>
+</div>
+<snackbar></snackbar>

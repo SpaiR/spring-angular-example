@@ -1,0 +1,12 @@
+@import "../../scss/mixins";
+
+.article-image {
+  @include content-background-template;
+
+  background: {
+    size: cover;
+    repeat: no-repeat;
+  };
+
+  opacity: .9;
+}

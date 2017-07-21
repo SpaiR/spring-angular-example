@@ -1,0 +1,25 @@
+// Layout
+$drawer-background-color: #424242;
+$drawer-width: 300px;
+$content-background-color: #fafafa;
+
+$large-screen-size: 1025px;
+$small-screen-size: 479px;
+
+$content-large-padding: 56px;
+$content-small-padding: ($content-large-padding / 2);
+
+$main-color: #3f51b5;
+
+// Official brands colors taken from `https://brandcolors.net/`
+$facebook-brand-color:   #3b5998;
+$twitter-brand-color:    #1da1f2;
+$github-brand-color:     #333;
+$googleplus-brand-color: #dd4b39;
+
+$brands-colors-map: (
+  facebook:    $facebook-brand-color,
+  twitter:     $twitter-brand-color,
+  github:      $github-brand-color,
+  google-plus: $googleplus-brand-color
+);

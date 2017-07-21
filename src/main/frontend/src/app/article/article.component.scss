@@ -1,0 +1,10 @@
+@import "../../scss/mixins";
+
+.mdl-grid {
+
+  @include content-template;
+
+  .like-badge {
+    left: -15px;
+  }
+}

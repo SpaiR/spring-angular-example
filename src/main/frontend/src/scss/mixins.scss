@@ -1,0 +1,75 @@
+@import "variables";
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+@mixin large-screen-mode {
+  @media screen and (min-width: $large-screen-size){
+    @content
+  }
+}
+
+@mixin small-screen-mode {
+  @media screen and (max-width: $small-screen-size) {
+    @content
+  }
+}
+
+@mixin content-left-right-padding {
+  padding: {
+    left: $content-large-padding;
+    right: $content-large-padding;
+  }
+
+  @include  small-screen-mode {
+    padding: {
+      left: $content-small-padding;
+      right: $content-small-padding;
+    }
+  }
+}
+
+@mixin content-template {
+  .content-cell {
+    margin: {
+      bottom: 40px;
+      top: 10vh;
+    }
+
+    .main-content {
+      padding: {
+        top: 40px;
+        bottom: 30px;
+      }
+
+      @include content-left-right-padding;
+
+      border-radius: 2px;
+      margin-bottom: 40px;
+
+      .header {
+        text-align: center;
+
+        hr {
+          margin: .5em 1em;
+          border-top: 2px solid $main-color;
+        }
+      }
+    }
+  }
+}
+
+@mixin content-background-template {
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: $main-color;
+  left: 0;
+  top: 0;
+  right: 0;
+}

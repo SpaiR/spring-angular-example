@@ -1,0 +1,66 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+mdl-layout-drawer {
+  background-color: $drawer-background-color;
+  border-right: transparentize($drawer-background-color, 0.25);
+  text-align: center;
+
+  @include large-screen-mode {
+    width: $drawer-width;
+  }
+
+  &.is-visible {
+    width: $drawer-width;
+  }
+
+  mdl-layout-title {
+    padding: 0;
+
+    .title-text {
+      color: #e6e6e6;
+    }
+  }
+
+  hr {
+    margin: {
+      left: 2em;
+      right: 2em;
+    };
+  }
+
+  nav {
+    padding: 0;
+
+    [mdl-button] {
+      color: white;
+
+      @each $brand, $color in $brands-colors-map {
+        &.icon-#{$brand}:hover {
+          background-color: $color;
+        }
+      }
+
+      span {
+        line-height: inherit;
+      }
+    }
+
+    img {
+      opacity: .87;
+    }
+  }
+
+  .drawer-footer {
+    padding-bottom: 20px;
+    color: white;
+  }
+}
+
+mdl-layout-content {
+  background-color: $content-background-color;
+
+  @include large-screen-mode {
+    margin-left: $drawer-width !important;
+  }
+}

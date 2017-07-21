@@ -1,0 +1,19 @@
+<h6><b>ID:</b>&nbsp;{{article.id}}</h6>
+<h6><b>Post date:</b>&nbsp;{{article.postDate | date}}</h6>
+<p>
+  <mdl-textfield label="Title" type="text" [(ngModel)]="article.title" floating-label></mdl-textfield>
+</p>
+<p>
+  <mdl-textfield label="Image Link" type="text" [(ngModel)]="article.imageLink" floating-label></mdl-textfield>
+</p>
+<p>
+  <mdl-textfield rows="4" label="Preview text" type="text" [(ngModel)]="article.previewText" floating-label></mdl-textfield>
+</p>
+<p>
+  <mdl-textfield rows="10" label="Main text" type="text" [(ngModel)]="article.text" floating-label></mdl-textfield>
+</p>
+<p>
+  <button mdl-button mdl-button-type="raised" mdl-ripple mdl-colored="primary" (click)="save()">Save</button>
+  &nbsp;
+  <button mdl-button mdl-button-type="raised" mdl-ripple mdl-colored="accent" (click)="remove()">Delete</button>
+</p>

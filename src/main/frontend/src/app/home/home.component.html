@@ -1,0 +1,12 @@
+<div class="mdl-grid home-grid">
+  <div [@visiblePreview]="true" class="mdl-cell" *ngFor="let preview of previews">
+    <preview-card [preview]="preview"></preview-card>
+  </div>
+</div>
+<div class="load-more-block">
+  <button class="load-more-button" mdl-button mdl-button-type="raised" mdl-colored="accent" mdl-ripple
+          *ngIf="showLoadMoreButton" (click)="loadMorePreviews()">
+    Load more
+  </button>
+  <mdl-spinner [active]="loadingProcess"></mdl-spinner>
+</div>

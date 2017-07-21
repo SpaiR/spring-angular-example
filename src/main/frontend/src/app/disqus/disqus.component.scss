@@ -1,0 +1,7 @@
+@import "../../scss/mixins";
+
+#disqus_thread {
+  padding-bottom: 50px;
+
+  @include content-left-right-padding();
+}

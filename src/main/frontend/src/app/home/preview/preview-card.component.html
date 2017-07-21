@@ -1,0 +1,10 @@
+<a routerLink="../articles/{{preview.id}}">
+  <mdl-card mdl-shadow="4" [style.background-image]="'url(' + preview.imageLink + ')'">
+    <mdl-card-title>
+      <div class="mdl-typography--display-2 preview-title" [innerHtml]="preview.title"></div>
+    </mdl-card-title>
+    <mdl-card-supporting-text>
+      <div class="card-text" [innerHtml]="preview.text"></div>
+    </mdl-card-supporting-text>
+  </mdl-card>
+</a>

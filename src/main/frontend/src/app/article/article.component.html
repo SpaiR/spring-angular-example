@@ -1,0 +1,28 @@
+<div class="mdl-grid">
+  <div class="mdl-cell--hide-phone">
+    <article-image [imageLink]="article.imageLink"></article-image>
+  </div>
+  <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="content-cell mdl-cell mdl-color--white mdl-cell--10-col mdl-color-text--grey-800" mdl-shadow="4" [@flyInContent]="true">
+    <div class="main-content">
+      <div class="mdl-typography--display-3 header">
+        <span [innerHtml]="article.title"></span>
+        <hr />
+      </div>
+      <div [innerHtml]="article.text"></div>
+      <hr />
+      <div>
+        <button mdl-button mdl-button-type="icon" mdl-ripple not-provided mdl-tooltip="Share">
+          <mdl-icon>share</mdl-icon>
+        </button>
+        &nbsp;
+        <button mdl-button mdl-button-type="icon" mdl-ripple (click)="thumbUp()">
+          <mdl-icon>thumb_up</mdl-icon>
+        </button>
+        <span mdl-badge="{{article.likes}}" class="like-badge"></span>
+        <span style="float: right;"><b>{{article.postDate | date}}</b></span>
+      </div>
+    </div>
+    <disqus identifier="article.{{article.id}}.{{article.postDate}}" [title]="article.title"></disqus>
+  </div>
+</div>

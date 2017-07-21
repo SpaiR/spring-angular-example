@@ -1,0 +1,63 @@
+@import "../../../scss/mixins";
+
+$transition-time: .2s;
+
+@mixin title-text-shadow($color) {
+  text-shadow: 5px 5px 10px $color, 0 0 10px $color;
+}
+
+a {
+  text-decoration: none;
+}
+
+mdl-card {
+  margin: auto;
+  width: auto;
+  height: 400px;
+  opacity: .7;
+
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
+
+  @include transition(opacity $transition-time);
+
+  &:hover {
+    opacity: .85;
+
+    mdl-card-supporting-text {
+      height: 20%;
+      opacity: .87;
+    }
+
+    mdl-card-title {
+      @include title-text-shadow(#323232)
+    }
+  }
+
+  mdl-card-title {
+    margin: auto;
+    color: #f8f8f8;
+    width: 100%;
+    text-align: center;
+
+    @include title-text-shadow(black);
+    @include transition(text-shadow ($transition-time * 2));
+
+    .preview-title {
+      width: inherit;
+    }
+  }
+
+  mdl-card-supporting-text {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+
+    @include transition(all $transition-time);
+  }
+}
