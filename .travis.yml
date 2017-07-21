@@ -1,0 +1,15 @@
+language: java
+jdk: oraclejdk8
+os: linux
+
+env:
+  - MAVEN_VERSION=3.3.9
+install:
+  - "mvn -N io.takari:maven:wrapper -Dmaven=3.3.9"
+  - "./mvnw --show-version --errors --batch-mode test-compile dependency:go-offline"
+  
+script: "./mvnw --show-version --errors --batch-mode clean verify"
+
+cache:
+    directories:
+      - $HOME/.m2
