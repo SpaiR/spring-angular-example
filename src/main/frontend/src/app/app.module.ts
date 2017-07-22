@@ -13,8 +13,6 @@ import { CoreModule }   from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule }   from './home/home.module';
 
-import { GoToTopButtonComponent } from './shared/go-to-top-button.component';
-
 @NgModule({
     imports: [
         BrowserModule,
@@ -30,10 +28,7 @@ import { GoToTopButtonComponent } from './shared/go-to-top-button.component';
 
         AppRoutingModule
     ],
-    declarations: [
-        AppComponent,
-        GoToTopButtonComponent
-    ],
-    bootstrap: [ AppComponent ]
+    declarations: [ AppComponent ],
+    bootstrap:    [ AppComponent ]
 })
 export class AppModule {}

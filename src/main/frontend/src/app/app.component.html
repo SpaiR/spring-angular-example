@@ -36,7 +36,6 @@
     </mdl-layout-drawer>
     <mdl-layout-content #mainLayout (scroll)="provideScrollEvent($event)">
       <router-outlet (deactivate)="onRouterDeactivate()"></router-outlet>
-      <go-to-top-button></go-to-top-button>
     </mdl-layout-content>
   </mdl-layout>
 </div>
