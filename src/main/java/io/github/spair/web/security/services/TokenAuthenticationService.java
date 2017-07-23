@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 public interface TokenAuthenticationService {
 
     /**
-     * Method to provide JWT into respnse header on success authorization.
+     * Method to provide JWT into response header on success authorization.
      * @param response where to place header
      * @param username to pass into token
      */
