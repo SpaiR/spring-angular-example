@@ -1,13 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy }        from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 
-import {
-    trigger, style, animate, transition
-} from '@angular/animations';
+import { componentDestroyed } from 'ng2-rx-componentdestroyed';
+import { Observable }         from 'rxjs/Observable';
 
-import { componentDestroyed }   from 'ng2-rx-componentdestroyed';
-import { Observable }           from 'rxjs/Observable';
-
-import { ContentScrollService } from '../core/content-scroll.service';
+import { ScrollProviderService } from '../scroll-provider/scroll-provider.service';
 
 @Component({
     selector: 'go-to-top-button',
@@ -41,10 +38,10 @@ export class GoToTopButtonComponent implements OnInit, OnDestroy {
 
     showButton: boolean = false;
 
-    constructor(private contentScrollService: ContentScrollService) {}
+    constructor(private scrollProviderService: ScrollProviderService) {}
 
     ngOnInit() {
-        this.contentScrollService.getScrollEvent()
+        this.scrollProviderService.scrollEventObservable
             .takeUntil(componentDestroyed(this))
             .subscribe(event => this.onScroll(event));
     }
@@ -52,7 +49,7 @@ export class GoToTopButtonComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {}
 
     scrollToTop(): void {
-        const el: any = this.contentScrollService.layoutRef.nativeElement;
+        const el: any = this.scrollProviderService.scrollElementRef.nativeElement;
         Observable.interval(5).takeWhile(() => el.scrollTop > 0)
             .subscribe(() => el.scrollTop -= this.getScrollSpeed(el.scrollTop));
     }

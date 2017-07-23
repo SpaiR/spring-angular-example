@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 
 import { SnackbarModule } from '../snackbar/snackbar.module';
 
-import { PreviewService }       from '../home/preview/preview.service';
-import { ArticleService }       from '../article/article.service';
-import { AuthGuardService }     from '../auth/auth-guard.service';
-import { AuthService }          from '../auth/auth.service';
-import { AboutService }         from '../about/about.service';
-import { ContentScrollService } from './content-scroll.service';
+import { PreviewService }   from '../home/preview/preview.service';
+import { ArticleService }   from '../article/article.service';
+import { AuthGuardService } from '../auth/auth-guard.service';
+import { AuthService }      from '../auth/auth.service';
+import { AboutService }     from '../about/about.service';
 
 @NgModule({
     imports: [ SnackbarModule ],
@@ -17,8 +16,7 @@ import { ContentScrollService } from './content-scroll.service';
         ArticleService,
         AuthGuardService,
         AuthService,
-        AboutService,
-        ContentScrollService
+        AboutService
     ]
 })
 export class CoreModule {}

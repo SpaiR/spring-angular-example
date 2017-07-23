@@ -6,7 +6,7 @@ import {
 
 import { componentDestroyed } from 'ng2-rx-componentdestroyed';
 
-import { ContentScrollService } from '../core/content-scroll.service';
+import { ScrollProviderService } from '../scroll-provider/scroll-provider.service';
 
 @Component({
     selector: 'article-image',
@@ -34,10 +34,10 @@ export class ArticleImageComponent implements OnInit, OnDestroy {
 
     offsetValue: number = 0;
 
-    constructor(private contentScrollService: ContentScrollService) {}
+    constructor(private scrollProviderService: ScrollProviderService) {}
 
     ngOnInit(): void {
-        this.contentScrollService.getScrollEvent()
+        this.scrollProviderService.scrollEventObservable
             .takeUntil(componentDestroyed(this))
             .subscribe(event => this.onScroll(event));
     }
