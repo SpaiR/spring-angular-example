@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MdlModule }    from '@angular-mdl/core';
 
-import { NotProvidedDirective } from './not-provided.directive';
+import { NotProvidedDirective   } from './not-provided.directive';
+import { GoToTopButtonComponent } from './go-to-top-button.component';
 
 @NgModule({
     imports: [
@@ -11,12 +12,14 @@ import { NotProvidedDirective } from './not-provided.directive';
         MdlModule
     ],
     declarations: [
-        NotProvidedDirective
+        NotProvidedDirective,
+        GoToTopButtonComponent
     ],
     exports: [
         CommonModule,
         MdlModule,
-        NotProvidedDirective
+        NotProvidedDirective,
+        GoToTopButtonComponent
     ]
 })
 export class SharedModule {}

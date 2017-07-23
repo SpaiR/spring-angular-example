@@ -1,27 +1,19 @@
-import { Component, AfterViewInit, ViewChild } from '@angular/core';
-
-import { ContentScrollService } from './core/content-scroll.service';
+import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
     selector: 'app',
     templateUrl: './app.component.html',
     styleUrls: [ './app.component.scss' ]
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements AfterViewInit {
 
-    @ViewChild('mainLayout') mainLayoutRef: any;
-
-    constructor(private contentScrollService: ContentScrollService) {}
-
-    ngAfterViewInit(): void {
-        this.contentScrollService.layoutRef = this.mainLayoutRef.elRef;
-    }
+    private mainLayoutRef: any;
 
     onRouterDeactivate(): void {
-        this.mainLayoutRef.elRef.nativeElement.scrollTop = 0;
+        this.mainLayoutRef.scrollTop = 0;
     }
 
-    provideScrollEvent(event: Event) {
-        this.contentScrollService.catchScrollEvent(event);
+    ngAfterViewInit(): void {
+        this.mainLayoutRef = document.getElementById('main-layout-content');
     }
 }

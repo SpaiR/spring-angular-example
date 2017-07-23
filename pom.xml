@@ -85,6 +85,26 @@
 			</build>
 		</profile>
 		<profile>
+			<id>cleanFrontend</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-clean-plugin</artifactId>
+						<configuration>
+							<filesets>
+								<fileset>
+									<directory>src/main/resources/static</directory>
+								</fileset>
+								<fileset>
+									<directory>src/main/frontend/dist</directory>
+								</fileset>
+							</filesets>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>includeFrontend</id>
 			<build>
 				<plugins>

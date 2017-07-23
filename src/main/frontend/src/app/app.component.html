@@ -34,9 +34,8 @@
         <span class="mdl-typography--caption-color-contrast">Code licensed under an MIT-style License.</span>
       </div>
     </mdl-layout-drawer>
-    <mdl-layout-content #mainLayout (scroll)="provideScrollEvent($event)">
+    <mdl-layout-content id="main-layout-content" scroll-provider>
       <router-outlet (deactivate)="onRouterDeactivate()"></router-outlet>
-      <go-to-top-button></go-to-top-button>
     </mdl-layout-content>
   </mdl-layout>
 </div>
