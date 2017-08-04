@@ -14,29 +14,29 @@
   "license": "MIT",
   "dependencies": {
     "@angular-mdl/core": "^4.0.8",
-    "@angular/animations": "=4.3.1",
-    "@angular/common": "=4.3.1",
-    "@angular/compiler": "=4.3.1",
-    "@angular/compiler-cli": "=4.3.1",
-    "@angular/core": "=4.3.1",
-    "@angular/forms": "=4.3.1",
-    "@angular/platform-browser": "=4.3.1",
-    "@angular/platform-browser-dynamic": "=4.3.1",
-    "@angular/router": "=4.3.1",
+    "@angular/animations": "=4.3.2",
+    "@angular/common": "=4.3.2",
+    "@angular/compiler": "=4.3.2",
+    "@angular/compiler-cli": "=4.3.2",
+    "@angular/core": "=4.3.2",
+    "@angular/forms": "=4.3.2",
+    "@angular/platform-browser": "=4.3.2",
+    "@angular/platform-browser-dynamic": "=4.3.2",
+    "@angular/router": "=4.3.2",
     "core-js": "^2.4.1",
     "material-design-lite": "^1.3.0",
     "ng2-rx-componentdestroyed": "^1.1.1",
     "ngx-cookie": "^1.0.0",
     "rxjs": "^5.4.2",
     "web-animations-js": "^2.3.1",
-    "zone.js": "^0.8.13"
+    "zone.js": "^0.8.16"
   },
   "devDependencies": {
-    "@ngtools/webpack": "^1.5.1",
-    "@types/node": "^8.0.14",
+    "@ngtools/webpack": "=1.5.1",
+    "@types/node": "^8.0.19",
     "angular-router-loader": "^0.6.0",
     "angular2-template-loader": "^0.6.2",
-    "awesome-typescript-loader": "^3.2.1",
+    "awesome-typescript-loader": "^3.2.2",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
@@ -48,7 +48,7 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "typescript": "=2.4.1",
-    "webpack": "=3.3.0"
+    "typescript": "=2.4.2",
+    "webpack": "=3.4.1"
   }
 }
