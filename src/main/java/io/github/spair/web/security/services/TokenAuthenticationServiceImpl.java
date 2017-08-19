@@ -20,7 +20,7 @@ import java.util.Date;
 @Service
 public class TokenAuthenticationServiceImpl implements TokenAuthenticationService {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(TokenAuthenticationServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TokenAuthenticationServiceImpl.class);
 
     @Autowired
     private ServiceProperties props;

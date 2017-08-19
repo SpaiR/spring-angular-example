@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = AboutRestController.class, secure = false)
 public class AboutRestControllerTest {
 
-    private final static String TEXT_FOR_RESPONSE = "text for response";
+    private static final String TEXT_FOR_RESPONSE = "text for response";
     private String fieldForFilling = null;
 
     @Autowired

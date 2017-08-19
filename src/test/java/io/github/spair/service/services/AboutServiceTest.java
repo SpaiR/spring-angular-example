@@ -19,7 +19,7 @@ import static org.mockito.Mockito.*;
 @RunWith(SpringRunner.class)
 public class AboutServiceTest {
 
-    private final static String TEXT_FOR_RETURN = "text from holder";
+    private static final String TEXT_FOR_RETURN = "text from holder";
     private String fieldForFilling = null;
 
     @TestConfiguration

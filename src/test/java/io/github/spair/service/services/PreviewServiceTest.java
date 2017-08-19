@@ -25,9 +25,9 @@ public class PreviewServiceTest {
     private final PreviewServiceTestHelper helper = new PreviewServiceTestHelper();
     private final List<Preview> checkingPreviewList = new ArrayList<>();
     private final List<Article> articleList = new ArrayList<>();
-    private final static int START = 0;
-    private final static int LIMIT = 2;
-    private final static int TOTAL = 10;
+    private static final int START = 0;
+    private static final int LIMIT = 2;
+    private static final int TOTAL = 10;
 
     @TestConfiguration
     static class PreviewServiceTestConfig {

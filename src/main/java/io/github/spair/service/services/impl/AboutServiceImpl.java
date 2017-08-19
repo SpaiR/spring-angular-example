@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AboutServiceImpl implements AboutService {
 
-    private final static String ABOUT_HOLDER_ID = "about";
+    private static final String ABOUT_HOLDER_ID = "about";
 
     @Autowired
     private PlainTextHolderRepository plainTextHolderRepository;

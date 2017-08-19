@@ -17,8 +17,8 @@ import static org.junit.Assert.*;
 @DataMongoTest
 public class ArticleRepositoryTest {
 
-    private final static Long FIRST_ID = 1L;
-    private final static Long LAST_ID  = 10L;
+    private static final Long FIRST_ID = 1L;
+    private static final Long LAST_ID  = 10L;
     private final ArticleRepositoryTestHelper helper = new ArticleRepositoryTestHelper();
 
     @Autowired
