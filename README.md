@@ -6,7 +6,7 @@ Example of how Spring Boot on backend and Angular on frontend can be used to cre
 
 __Demo:__ http://spring-angular-example.info.tm/
 
-Because it's example application some features purposely wasn't implemented. If you will try to use them appropriate snackbar message will be shown.
+Because it's an example some features purposely wasn't implemented. If you will try to use them appropriate snackbar message will be shown.
 
 ### How it was built
 #### Backend
@@ -20,7 +20,7 @@ Security part works with JSON Web Tokens integration and mainly made for admin m
 All of these parts wrapped with Spring Boot, which include embeded web container in Tomcat implementation.
 
 #### Frontend
-Frontend is actually independent single page application built on Angular 4 framework. Wat was used:
+Frontend is actually independent single page application built on Angular 4 framework. What was used:
 * Webpack with number of plugins
 * Angular 4
 * HTML/CSS/SASS
