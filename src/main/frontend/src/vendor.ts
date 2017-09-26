@@ -16,5 +16,5 @@ import 'ngx-cookie';
 import 'ng2-rx-componentdestroyed';
 
 // Styles
-import './scss/common.scss';
+import './assets/scss/common.scss';
 import 'material-design-lite/material.min.css';
